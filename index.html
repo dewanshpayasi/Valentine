@@ -1,0 +1,208 @@
+<!DOCTYPE html>  <html lang="en">    <head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>My Valentine 💖</title>  <style>    
+:root{    
+  --pink:#ff6fae;    
+  --rose:#ff3d81;    
+  --soft:#ffd1e6;    
+}    *{box-sizing:border-box}
+
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,var(--soft),#fff);
+font-family:'Segoe UI',sans-serif;
+overflow:hidden;
+}
+
+.card{
+background:rgba(255,255,255,.95);
+border-radius:24px;
+padding:26px;
+width:min(94vw,440px);
+text-align:center;
+box-shadow:0 20px 40px rgba(255,61,129,.25);
+}
+
+h1,h2{color:var(--rose);margin:6px 0}
+
+.subtitle{color:#b34773;margin-bottom:14px}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:14px;
+margin-top:12px;
+height:56px;
+}
+
+button{
+border:none;
+border-radius:999px;
+padding:14px 24px;
+font-size:1rem;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.primary{
+background:linear-gradient(135deg,var(--pink),var(--rose));
+color:#fff;
+}
+
+.secondary{
+background:#fff;
+border:2px solid var(--soft);
+color:#b34773;
+}
+
+.section{display:none;animation:fade .6s ease}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1}
+}
+
+.top-gif{
+width:100%;
+border-radius:18px;
+margin:12px 0;
+box-shadow:0 12px 24px rgba(255,61,129,.25);
+}
+
+.gifts{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-top:16px;
+}
+
+.gift{
+background:#fff7fb;
+border-radius:18px;
+padding:18px 10px;
+font-size:1rem;
+color:#7a2a4b;
+box-shadow:0 8px 18px rgba(255,61,129,.18);
+cursor:pointer;
+transition:.2s;
+}
+
+.gift:hover{transform:scale(1.05)}
+
+.gift span{
+font-size:1.6rem;
+display:block;
+}
+
+.gift-page{
+background:#fff7fb;
+border-radius:18px;
+padding:18px;
+color:#7a2a4b;
+box-shadow:0 12px 24px rgba(255,61,129,.22);
+}
+
+.back{
+margin-top:14px;
+}
+</style>  </head>  <body>  <div class="card">
+
+  <!-- MAIN -->  <div id="main">  
+  <h1>Hiieee 💕</h1>  <img class="top-gif"   
+src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2JwMWd3bHFtNmZsZGV0MThvYjU3ZWg2ZHRpNm10NWRpOGp3ZXV2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oriO0OEd9QIDdllqo/giphy.gif">
+
+  <p class="subtitle">  
+    I was smiling while making this…<br>  
+    because every little thing here is for you 💗  
+  </p>    <p style="color:#7a2a4b; font-size:0.95rem; line-height:1.5;">  
+    You make ordinary moments feel special,    
+    and even simple days feel lighter.    
+    So I just wanted to ask you something…    
+    from my heart to yours 🫶  
+  </p>    <h2>Will you be my Valentine? 💌</h2>    <div class="buttons">  
+    <button class="primary" onclick="showYes()">Yes 💖</button>  
+    <button class="secondary" onclick="showNo()">No 🙈</button>  
+  </div>  
+</div> <!-- YES -->  <div id="yes" class="section">    
+  <h1>YAYYY ❤️</h1>    <img class="top-gif" src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyY2RnNGk4OG9qdW5xZzhlZmhoa2RqMTdhOGw3YnV0OGRveWVsNmt6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif">    <p class="subtitle">I got some gifts for you 🎁</p>    <div class="gifts">    
+    <div class="gift" onclick="openGift(1)">    
+      <span>🎁</span> Gift One    
+    </div>    
+    <div class="gift" onclick="openGift(2)">    
+      <span>🎀</span> Gift Two    
+    </div>    
+    <div class="gift" onclick="openGift(3)">    
+      <span>💝</span> Gift Three    
+    </div>    
+  </div>    
+</div>  <!-- NO -->  <div id="no" class="section">    
+  <h1>Are you sure!!</h1>    <img class="top-gif" src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyMDRteWtuY25zNGJ6cTE0dnhrcms0OHg0Y3BpanN4YXB1cHprcnU2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/901mxGLGQN2PyCQpoc/giphy.gif">    <p class="subtitle">    
+    That hurt a little… but I’ll give you another chance 🥺💖    
+  </p>  <button class="primary back" onclick="goHome()">Try Again 💞</button>  </div>  <!-- GIFT 1 -->  <div id="gift1" class="section">    
+  <div class="gift-page">    
+    <h2>🎁 Gift One</h2>  <img class="top-gif" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyNGV2OGk5OXJ0azFpMXV5aW1tcTFmajd2eHU0cG1hMWFhdXd2N3prdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W1hd3uXRIbddu/giphy.gif">    <p>    
+  Your smile, your voice, your presence —    
+  all of it matters to me . You matters to me .    
+</p>    <p><b>You truly make my days brighter 💖</b></p>    </div>    
+  <button class="primary back" onclick="back()">Back to Gifts</button>    
+</div>  <!-- GIFT 2 -->  <div id="gift2" class="section">    
+  <div class="gift-page">    
+    <h2>🎀 Gift Two</h2>  <img class="top-gif" src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUybzFnd2JzdGt6OXJvOXlkcjA1aWQzanF2YXhlNXlpY2F6d2E2NnhtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yjvfyJN1regrQLDxGl/giphy.gif">    <p>    
+  Every moment with you feels special    
+  and the calm I feel just being around you.    
+</p>    <p>    
+  With you, everything feels nice.    
+</p>    <p><b>You feel like home 🏡💕</b></p>    </div>    
+  <button class="primary back" onclick="back()">Back to Gifts</button>    
+</div>  <!-- GIFT 3 -->  <div id="gift3" class="section">    
+  <div class="gift-page">    
+    <h2>💝 Gift Three</h2>  <img class="top-gif" src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyM3RocTkxM2QzbjhqOGsxNnVwZWFjNXhsOGhjY3V5OW1kNmY1d3M0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2tzon8OCC7BqmY/giphy.gif">    <p>    
+  Please don’t ever compare yourself to others.    
+  You don’t need to.    
+  You are perfect.    
+</p>    <p>    
+  You are the best —    
+  in the way you think, feel, love, and exist.    
+</p>    <p>    
+  You are the **bestesttttt person I have ever met in my life🎀.    
+</p>    <p>    
+  I love you so so soooo much 💗 —    
+  more than words can ever explain.    
+</p>    <p><b>I'always choose you. Only you 💞</b></p>    </div>    
+  <button class="primary back" onclick="back()">Back to Gifts</button>    
+</div>  </div>  <script>    
+function hideAll(){    
+  document.querySelectorAll('.section,#main')    
+    .forEach(e=>e.style.display='none');    
+}    function showYes(){
+hideAll();
+document.getElementById('yes').style.display='block';
+}
+
+function showNo(){
+hideAll();
+document.getElementById('no').style.display='block';
+}
+
+function openGift(n){
+hideAll();
+document.getElementById('gift'+n).style.display='block';
+}
+
+function back(){
+hideAll();
+document.getElementById('yes').style.display='block';
+}
+
+function goHome(){
+hideAll();
+document.getElementById('main').style.display='block';
+}
+</script>  </body>
+
+</html>    
